@@ -1,0 +1,73 @@
+body {
+  align-items    : center;
+  display        : flex;
+  height         : 100%;
+  justify-content: center;
+
+}
+
+.panel {
+  align-items        : center;
+  background-position: center;
+  background-size    : cover;
+  display            : flex;
+  flex-direction     : column;
+  height             : 100%;
+  justify-content    : space-between;/*the letters will become congested without it*/
+  transition         : width 0.5s;
+  width              : 20%;
+}
+
+
+.panel:nth-of-type(1) {
+  background-image: url("sky.jpg");
+}
+
+.panel:nth-of-type(2) {
+  background-image: url("forest.jpg");
+}
+
+.panel:nth-of-type(3) {
+  background-image: url("mountain.jpg");
+}
+
+.panel:nth-of-type(4) {
+  background-image: url("river.jpg");
+}
+
+.panel:nth-of-type(5) {
+  background-image: url("field.jpg");
+}
+
+
+.panel_bottom,
+.panel_center,
+.panel_top {
+  color      : ghostwhite;
+  font-family: "Arial";
+  font-size  : 2rem;
+  transition : transform 0.5s;/*It delays the text transformation*/
+	
+}
+
+/** special part***/
+
+.panel_top {
+  transform: translateY(-100%);
+}
+
+.panel_bottom {
+  transform: translateY(100%);
+}
+
+.panel.panel-leader {
+  width: 100%;
+}
+
+.panel.panel-leader .panel_top {
+  transform: translateY(50%);
+}
+
+.panel.panel-leader .panel_bottom {
+  transform: translateY(-50%);
+}
